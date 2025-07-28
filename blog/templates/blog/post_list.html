@@ -6,5 +6,11 @@
 </head>
 <body>
     <h1>博客列表</h1>
+    {% for item in data %}
+    <h2><a href="">{{ item.title }}</a></h2>
+        <h3>作者：{{ item.author }}</h3>
+        <h6>发布时间：{{ item.published_date|date:'Y-m-d H:i:s'}}</h6>
+        <p>{{ item.text|linebreaksbr }}</p>
+    {% endfor %}
 </body>
 </html>
